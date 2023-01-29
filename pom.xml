@@ -8,4 +8,11 @@
 	<groupId>tech.guanli</groupId>
 	<artifactId>example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct</artifactId>
+			<version>1.5.3.Final</version>
+		</dependency>
+	</dependencies>
 </project>
