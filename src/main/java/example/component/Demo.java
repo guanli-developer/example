@@ -21,11 +21,21 @@ public class Demo {
 	@Autowired
 	private RelativeColdDataReader relativeColdDataReader;
 
+	@Autowired
+	private AbsoluteSerializableColdDataReader absoluteSerializableColdDataReader;
+
+	@Autowired
+	private RelativeSerializableColdDataReader relativeSerializableColdDataReader;
+
 	@PostConstruct
 	public void redis() {
 		System.out.println(simpleAbsoluteStringReader.getAndSetIfAbsent("absolute:string:key", null, 60L));
 		System.out.println(simpleRelativeStringReader.getAndSetIfAbsent("relative:string:key", null, 60L));
 		System.out.println(absoluteColdDataReader.getAndSetIfAbsent("absolute:object:key", null, 60L));
 		System.out.println(relativeColdDataReader.getAndSetIfAbsent("relative:object:key", null, 60L));
+		System.out
+				.println(absoluteSerializableColdDataReader.getObjectAndSetIfAbsent("absolute:object:key", null, 60L));
+		System.out
+				.println(relativeSerializableColdDataReader.getObjectAndSetIfAbsent("relative:object:key", null, 60L));
 	}
 }
