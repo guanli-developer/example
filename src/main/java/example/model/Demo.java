@@ -1,7 +1,7 @@
 package example.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 
@@ -15,7 +15,7 @@ public class Demo {
 
 	private String name;
 
-	private Date time;
+	private LocalDateTime dataTime;
 
 	private BigDecimal money;
 

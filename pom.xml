@@ -15,7 +15,7 @@
 		</dependency>
 		<dependency>
 			<groupId>tech.guanli.boot.suite</groupId>
-			<artifactId>mybatis-plus-dml-history-spring-boot-starter</artifactId>
+			<artifactId>mybatis-plus-dml-history-mongodb-store-spring-boot-starter</artifactId>
 			<version>1.0.0-RELEASE</version>
 		</dependency>
 		<dependency>

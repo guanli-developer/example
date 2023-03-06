@@ -4,9 +4,16 @@ spring:
     url: "jdbc:mysql://gz-cdb-puri9mdf.sql.tencentcdb.com:63151/demo?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=Asia/Shanghai&autoReconnect=true"
     username: demo
     password: open_demo
+  data:
+    mongodb:
+      uri: "mongodb://root:123456@127.0.0.1:27017/demo?authSource=admin"
 tech:
   guanli:
     boot:
       dml-history:
         enable-delete-audit: true
         enable-update-audit: true
+        storage:
+          mongo:
+            delete-document-name: dml-document
+            update-document-name: dml-document
