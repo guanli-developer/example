@@ -8,8 +8,8 @@ import tech.guanli.boot.data.mybatis.plus.dml.history.storage.mongo.component.Ab
 public class DeleteComponent extends AbstractDeleteHistoryMongoStorage {
 
 	@Override
-	protected Object setOperator(Object operator) {
-		return "deleter";
+	protected void setOperator() {
+		setOperator("deleter");
 	}
 
 }

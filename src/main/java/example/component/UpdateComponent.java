@@ -8,8 +8,8 @@ import tech.guanli.boot.data.mybatis.plus.dml.history.storage.mongo.component.Ab
 public class UpdateComponent extends AbstractUpdateHistoryMongoStorage {
 
 	@Override
-	protected Object setOperator(Object operator) {
-		return "updater";
+	protected void setOperator() {
+		setOperator("updater");
 	}
 
 }
